@@ -9,7 +9,7 @@ namespace Custom_List_Proj
     class CustomList<T>
     {
         //member variables
-        private T[] items;
+        public T[] items;
         //constructor
         public CustomList()
         {
@@ -19,7 +19,7 @@ namespace Custom_List_Proj
         //member methods
         public void Add(T item)
         {
-
+                                                       
         }
 
     }
