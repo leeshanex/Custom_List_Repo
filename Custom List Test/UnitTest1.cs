@@ -44,12 +44,13 @@ namespace Custom_List_Test
             //Arrange
             CustomList<int> testList = new CustomList<int>();
             int itemToAdd = 10;
-            int expected = 1;
+            int expected = 5;
             int actual;
 
             //Act
             testList.Add(itemToAdd);
-            actual = testList.Count;
+           
+            actual = testList.Count++;
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -57,8 +58,15 @@ namespace Custom_List_Test
         public void Add_AddingMultipleValueToEmptyCustomList_IncreasingCapacityCount()
         {
             //Arrange
-            int itemToAdd = 
+            CustomList<int> testList = new CustomList<int>();
+            int[] itemsToAdd = new int[4];
+            itemsToAdd = new int[8];
+            int actual;
+
             //Act
+            testList.Add(itemToAdd);
+
+            actual = testList.Count++;
 
             //Assert
         }
