@@ -69,7 +69,7 @@ namespace Custom_List_Test
             actual = testList.Count++;
 
             //Assert
-
+            Assert.AreEqual(expected, actual);
         }
     }
 }

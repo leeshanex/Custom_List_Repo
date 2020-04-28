@@ -21,6 +21,12 @@ namespace Custom_List_Proj
         {
                                                        
         }
+        public void Count()
+        {
+
+        }
+
+    
 
     }
 }
