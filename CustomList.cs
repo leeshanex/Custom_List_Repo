@@ -10,6 +10,9 @@ namespace Custom_List_Proj
     {
         //member variables
         private T[] items;
+        private int count;
+        private int capacity;
+        private int remove;
         //constructor
         public CustomList()
         {
@@ -22,6 +25,14 @@ namespace Custom_List_Proj
                                                        
         }
         public void Count()
+        {
+
+        }
+        public void Capacity()
+        {
+
+        }
+        public void Remove()
         {
 
         }
