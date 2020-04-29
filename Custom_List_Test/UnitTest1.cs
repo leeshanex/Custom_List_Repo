@@ -78,7 +78,7 @@ namespace Custom_List_Test
             actual = testList[0];
             //Assert
             Assert.AreEqual(expected, actual);
-        } 
+        }
         [TestMethod]
         public void Add_ThreePositiveValues_CheckIndexOne()
         {
@@ -97,7 +97,7 @@ namespace Custom_List_Test
             testList[4] = 5;
             //Assert
             Assert.AreEqual(expected, actual);
-        } 
+        }
         [TestMethod]
         public void Add_ThreePositiveValues_CheckCapacity()
         {
@@ -160,8 +160,95 @@ namespace Custom_List_Test
             //Assert
             Assert.AreEqual(expected, actual);
         }
-
-
-
-    }
+        [TestMethod]
+        public void Add_FivePositiveValues_CheckIndexZero()
+        {
+            //Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int value1 = 5;
+            int value2 = 8;
+            int value3 = 12;
+            int value4 = 144;
+            int value5 = 288;
+            int expected = 5;
+            int actual;
+            //Act
+            testList.Add(value1);
+            testList.Add(value2);
+            testList.Add(value3);
+            testList.Add(value4);
+            testList.Add(value5);
+            actual = testList[0];
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Add_FivePositiveValues_CheckIndexFour()
+        {
+            //Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int value1 = 5;
+            int value2 = 8;
+            int value3 = 12;
+            int value4 = 144;
+            int value5 = 288;
+            int expected = 288;
+            int actual;
+            //Act
+            testList.Add(value1);
+            testList.Add(value2);
+            testList.Add(value3);
+            testList.Add(value4);
+            testList.Add(value5);
+            actual = testList[4];
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Remove_FivePositiveValuesRemoveOne_CheckIndexZero()
+        {
+            //Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int value1 = 5;
+            int value2 = 8;
+            int value3 = 12;
+            int value4 = 144;
+            int value5 = 288;
+            int expected = 288;
+            int actual;
+            //Act
+            testList.Add(value1);
+            testList.Add(value2);
+            testList.Add(value3);
+            testList.Add(value4);
+            testList.Add(value5);
+            testList.Remove(value1);
+            actual = testList[1];
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Remove_FivePositiveValuesRemoveOne_CheckIndexZero1()
+        {
+            //Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int value1 = 144;
+            int value2 = 144;
+            int value3 = 144;
+            int value4 = 144;
+            int value5 = 144;
+            int expected = 144;
+            int actual;
+            //Act
+            testList.Add(value1);
+            testList.Add(value2);
+            testList.Add(value3);
+            testList.Add(value4);
+            testList.Add(value5);
+            testList.Remove(144);
+            actual = testList[0];
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+    }   
 }
