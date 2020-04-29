@@ -31,6 +31,20 @@ namespace Custom_List_Proj
                 items[index] = value;
             }
         }
+        public int Count
+        {
+            get
+            {
+                return count;
+            }
+        }
+        public int Capacity
+        {
+            get
+            {
+                return capacity;
+            }
+        }
         //constructor
         public CustomList()
         {
