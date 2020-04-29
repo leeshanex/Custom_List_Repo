@@ -39,37 +39,30 @@ namespace Custom_List_Test
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        public void Add_AddingMultipleValueToEmptyCustomList_()
+        public void Add_FourPostiveInteger_CountEqualsFour()
         {
             //Arrange
             CustomList<int> testList = new CustomList<int>();
-            int itemToAdd = 10;
-            int expected = 5;
+            int value1 = 5;
+            int value2 = 8;
+            int value3 = 12;
+            int value4 = 144;
+            int expected = 4;
             int actual;
 
             //Act
-            testList.Add(itemToAdd);
-
-            actual = testList.Count++;
+            testList.Add(value1);
+            testList.Add(value2);
+            testList.Add(value3);
+            testList.Add(value4);
+            actual = testList.Count;
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        public void Add_AddingMultipleValueToEmptyCustomList_IncreasingCapacityCount()
-        {
-            //Arrange
-            CustomList<int> testList = new CustomList<int>();
-            int[] itemsToAdd = new int[4];
-            itemsToAdd = new int[8];
-            int actual;
+        public void 
 
-            //Act
-            testList.Add(itemToAdd);
-
-            actual = testList.Count++;
-
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
+       
+        
     }
 }
