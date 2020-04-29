@@ -8,7 +8,7 @@ namespace Custom_List_Test
     public class UnitTest1
     {
         [TestMethod]
-        public void Add_AddingOneValueToEmptyCustomList_AddedValueGoesToIndexZero()
+        public void Add_OnePostiveInteger_CheckIndexZero()
         {
             //Arrange
             CustomList<int> testList = new CustomList<int>();
@@ -24,7 +24,7 @@ namespace Custom_List_Test
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Add_AddingOneValueToEmptyCustomList_CountOfCustomListIncrements()
+        public void Add_OnePositiveInteger_CountEqualsOne()
         {
             //Arrange
             CustomList<int> testList = new CustomList<int>();
@@ -39,6 +39,7 @@ namespace Custom_List_Test
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
         public void Add_FourPostiveInteger_CountEqualsFour()
         {
             //Arrange
@@ -60,7 +61,11 @@ namespace Custom_List_Test
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        public void 
+        [TestMethod]
+        public void Add_ThreePositiveValues_CheckIndexZero()
+        {
+
+        }
 
        
         
