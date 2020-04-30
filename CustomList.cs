@@ -76,10 +76,7 @@ namespace Custom_List_Proj
         public void Remove(T item)
         {
             
-            if (count < 0)
-            {
-                count--;
-            }
+           
             
         }
     }

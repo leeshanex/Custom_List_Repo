@@ -251,7 +251,7 @@ namespace Custom_List_Test
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Remove_ThreePostiveValueRemoveOne_CheckCapacity()
+        public void Remove_ThreePostiveValueRemoveTwo_CheckCapacity()
         {
             //Arrange
             CustomList<int> testList = new CustomList<int>();
@@ -264,8 +264,8 @@ namespace Custom_List_Test
             testList.Add(value1);
             testList.Add(value2);
             testList.Add(value3);
-            testList.Remove(value3);
-            actual = testList[0];
+            testList.Remove(0, 1);
+            actual = testList.Capacity;
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -288,7 +288,7 @@ namespace Custom_List_Test
             testList.Add(value4);
             testList.Add(value5);
             testList.Remove(value5);
-            actual = testList[0];
+            actual = testList.Capacity;
             //Assert
             Assert.AreEqual(expected, actual);
         }
