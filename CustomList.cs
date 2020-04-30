@@ -58,26 +58,28 @@ namespace Custom_List_Proj
 
         public void Add(T item)
         {
-
-            if (count == capacity && count > capacity)
+       
+            if (count == capacity)
             {
                 capacity *= 2;
                 T[] tempArray = new T[capacity];
 
-                for(int i = 0; i < count; i++)
+                for (int i = 0; i < count; i++)
                 {
-                    items[i] = tempArray[i];
+                    tempArray[i] = items[i];
                 }
+                items = tempArray;
             }
             items[count] = item;
             count++;
-
         }
         public void Remove(T item)
         {
-            
-           
-            
+            //if ()
+            //{
+
+            //}
+         
         }
     }
 }

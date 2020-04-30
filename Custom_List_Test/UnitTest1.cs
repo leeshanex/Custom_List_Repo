@@ -94,7 +94,6 @@ namespace Custom_List_Test
             testList.Add(value2);
             testList.Add(value3);
             actual = testList[1];
-            testList[4] = 5;
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -264,7 +263,7 @@ namespace Custom_List_Test
             testList.Add(value1);
             testList.Add(value2);
             testList.Add(value3);
-            testList.Remove(0, 1);
+            testList.Remove(value1);
             actual = testList.Capacity;
             //Assert
             Assert.AreEqual(expected, actual);
