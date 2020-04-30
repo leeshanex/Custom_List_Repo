@@ -223,12 +223,12 @@ namespace Custom_List_Test
             testList.Add(value4);
             testList.Add(value5);
             testList.Remove(value1);
-            actual = testList[1];
+            actual = testList[0];
             //Assert
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Remove_FivePositiveValuesRemoveOne_CheckIndexZero1()
+        public void Remove_FivePositiveValuesRemoveOne_CheckCount()
         {
             //Arrange
             CustomList<int> testList = new CustomList<int>();
@@ -237,7 +237,7 @@ namespace Custom_List_Test
             int value3 = 144;
             int value4 = 144;
             int value5 = 144;
-            int expected = 144;
+            int expected = 4;
             int actual;
             //Act
             testList.Add(value1);
@@ -246,9 +246,52 @@ namespace Custom_List_Test
             testList.Add(value4);
             testList.Add(value5);
             testList.Remove(144);
+            actual = testList.Count;
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Remove_ThreePostiveValueRemoveOne_CheckCapacity()
+        {
+            //Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int value1 = 144;
+            int value2 = 144;
+            int value3 = 144;
+            int expected = 4;
+            int actual;
+            //Act
+            testList.Add(value1);
+            testList.Add(value2);
+            testList.Add(value3);
+            testList.Remove(value3);
             actual = testList[0];
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Remove_FivePositiveValuesRemoveOne_CheckCapacity()
+        {
+            //Arrange
+            CustomList<int> testList = new CustomList<int>();
+            int value1 = 144;
+            int value2 = 144;
+            int value3 = 144;
+            int value4 = 144;
+            int value5 = 144;
+            int expected = 4;
+            int actual;
+            //Act
+            testList.Add(value1);
+            testList.Add(value2);
+            testList.Add(value3);
+            testList.Add(value4);
+            testList.Add(value5);
+            testList.Remove(value5);
+            actual = testList[0];
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
     }   
 }
