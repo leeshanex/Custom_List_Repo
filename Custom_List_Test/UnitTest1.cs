@@ -214,7 +214,7 @@ namespace Custom_List_Test
             int value3 = 12;
             int value4 = 144;
             int value5 = 288;
-            int expected = 12;
+            int expected = 8;
             int actual;
             //Act
             testList.Add(value1);
