@@ -64,7 +64,7 @@ namespace Custom_List_Proj
                 capacity *= 2;
                 T[] tempArray = new T[capacity];
 
-                foreach(int i = 0; i < count; i++)
+                for(int i = 0; i < count; i++)
                 {
                     items[i] = tempArray[i];
                 }
