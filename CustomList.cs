@@ -75,10 +75,7 @@ namespace Custom_List_Proj
         }
         public void Remove(T item)
         {
-            //if ()
-            //{
-
-            //}
+           
          
         }
     }
